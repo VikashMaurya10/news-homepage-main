@@ -1,0 +1,67 @@
+header {
+    padding: 2rem 0 0 0;
+    position: relative;
+
+    @include maximum(mobile) {
+        margin: 0;
+    }
+
+    nav {
+        margin: 2rem auto;
+        max-width: 80%;
+        max-height: 40px;
+
+        @include maximum(mobile) {
+            max-width: 90%;
+            margin: 28px auto;
+        }
+
+        .links {
+            gap: 39px;
+
+            li {
+                a {
+                    color: $Dark-grayish-blue;
+                    font-weight: $regular;
+                    transition: color 0.2s ease-in-out;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+
+            @include maximum(mobile) {
+                position: absolute;
+                background-color: $Off-white;
+                flex-direction: column;
+                justify-content: center;
+                height: 100vh;
+                top: 0;
+                right: 0;
+                width: 0;
+                gap: 2rem;
+                overflow: hidden;
+                transition: width 0.3s ease-in-out;
+
+                li {
+                    padding-left: 2rem;
+                }
+            }
+
+        }
+
+        .show-nav {
+            width: 70%;
+        }
+
+        .ham-btn,
+        .close-btn {
+            z-index: 1;
+
+            @include minimum(mobile) {
+                display: none;
+            }
+        }
+    }
+}

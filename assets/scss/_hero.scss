@@ -1,0 +1,147 @@
+main {
+    max-width: 80%;
+    margin: 0 auto;
+
+    @include maximum(mobile) {
+        max-width: 90%;
+    }
+
+    // hero section
+    .hero {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1.9rem;
+        grid-auto-flow: column;
+
+        @include maximum(L-laptop) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, auto);
+        }
+
+        &__article {
+            picture {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &__content {
+                display: grid;
+                grid-template-columns: 1fr 0.87fr;
+                grid-template-rows: 1fr;
+                justify-content: space-between;
+                margin-top: 2rem;
+
+                @include maximum(mobile) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 2fr;
+                }
+
+                h1 {
+                    font-size: 2.5rem;
+
+                    @include minimum(mobile) {
+                        font-size: 3rem;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+
+                .para {
+                    display: grid;
+
+                    button {
+                        margin-top: 2rem;
+                        padding: 18px 0;
+                        width: 50%;
+                        text-transform: uppercase;
+                        font-weight: $bold;
+                        color: $Off-white;
+                        background: $red;
+                        letter-spacing: 2px;
+                        cursor: pointer;
+                        transition: background 0.3s ease-in-out;
+
+                        &:hover {
+                            background: $dark-blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__highlights {
+            padding: 2.5rem 2.45rem;
+            background: $dark-blue;
+
+            h2 {
+                color: $orange;
+                font-size: 1.75rem;
+            }
+
+
+            h3 {
+                font-size: 1.25rem;
+                color: $Grayish-blue;
+                margin-bottom: 1rem;
+                transition: color 0.2s ease-in-out;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+
+            div {
+                padding: 2rem 0 2rem 0;
+                border-bottom: 1px solid $Dark-grayish-blue;
+
+                &:last-child {
+                    padding: 2rem 0 0 0;
+                    border: 0;
+                }
+            }
+        }
+    }
+
+    // tranding section
+    .trending {
+        margin: 3rem 0;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+        &__item {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                max-width: 90%;
+            }
+
+            &__content {
+                min-height: 100%;
+                padding-left: 1rem;
+
+                p:first-child {
+                    font-weight: $bold;
+                    font-size: 2rem;
+                    color: $Grayish-blue;
+                }
+
+                h4 {
+                    font-size: 1.1rem;
+                    margin: 0.9rem 0;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+
+        }
+    }
+}

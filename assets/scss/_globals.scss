@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Inter;
+    src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+ul,
+li,
+button,
+a {
+    outline: none;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: $Off-white;
+    transition: background 0.3s ease-in-out;
+}
+
+.fade-in {
+    @include maximum(mobile) {
+        background-color: $fade-in;
+        overflow: hidden;
+    }
+}
+
+p {
+    font-size: 1rem;
+    color: $Dark-grayish-blue ;
+    font-weight: $regular;
+    line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: $extra-bold;
+}
+
+.d-n {
+    display: none;
+}
+
+.d-f {
+    display: flex;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.fd-c {
+    flex-direction: column;
+}
