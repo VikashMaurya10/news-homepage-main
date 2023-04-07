@@ -25,9 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
----
-
-| Laptop preview                                   | Tablet preview                                | mobile preview                                 |
+| Dexktop view                                     | Tablet view                                   | mobile view                                    |
 | ------------------------------------------------ | --------------------------------------------- | ---------------------------------------------- |
 | ![desktop [preview]](./assets/images/laptop.png) | ![tablet preview](./assets/images/tablet.png) | ![mobile previvew](./assets/images/mobile.png) |
 
@@ -59,7 +57,6 @@ Users should be able to:
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 ```
-
 > This code use to create responsive <ins>**Grid columns**</ins>. If any column has lessthen width <ins>**300px**</ins> then that column is auto shifted in another row.
 
 ### Useful resources
